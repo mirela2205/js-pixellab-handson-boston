@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex 5</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
+    <link rel="stylesheet" href="https://tab.pixellab.ro/pixeltab.css" />
+
+    <script src="https://tab.pixellab.ro/pixeltab-top.js"></script>
+  </head>
+
+  <body
+    onload="console.log(prompt('Bine ai venit, cum te cheama?')); alert('Bine ai venit')"
   >
-  <title>Ex 5</title>
+    <h1 onclick="alert('Mire');">Hello</h1>
+    <button onclick="console.log('Am fost apasat.');">Press me</button>
+    <button onclick="alert('Butonul a fost apasat.');">Pressed</button>
+    <button
+      onmouseover="console.log('Ai vrea sa apesi acest buton?');"
+      onclik="console.log(prompt('Care este numele tau?'));"
+    >
+      Want to?
+    </button>
 
-  <link
-    rel="stylesheet"
-    href="https://tab.pixellab.ro/pixeltab.css"
-  >
+    <!-- nu merge metoda prompt din buton -->
 
-  <script src="https://tab.pixellab.ro/pixeltab-top.js"></script>
-</head>
+    <script src="./js/app.js"></script>
 
-<body>
-
-  <!-- <h1 onclick="alert('Mire');">Hello</h1>
-  <button></button>
-
-  <script src="./js/app.js"></script> -->
-
-  <div
-    class="pixeltab-host"
-    id="js01-02-05"
-  ></div>
-  <script src="https://tab.pixellab.ro/static/js/pixeltab.js"></script>
-</body>
-
+    <div class="pixeltab-host" id="js01-02-05"></div>
+    <script src="https://tab.pixellab.ro/static/js/pixeltab.js"></script>
+  </body>
 </html>

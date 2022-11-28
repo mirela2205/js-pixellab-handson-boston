@@ -1,1 +1,1 @@
-// console.log('Imi fac tema la JavaScript.');
+console.log('Imi fac tema la JavaScript.');
