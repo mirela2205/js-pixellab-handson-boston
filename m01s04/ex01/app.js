@@ -6,7 +6,7 @@ var number = Number(userInput);
 // number poate fi un numar sau NaN
 // isNaN(number) || userInput === null
 
-if (userInput === null || isNaN(number) || userInput.trim().length === 0) {
+if (userInput === null || userInput.trim().length === 0 || isNaN(number)) {
   message = 'Nu ai introdus un numar';
 } else {
   if (number > referenceNumber) {
