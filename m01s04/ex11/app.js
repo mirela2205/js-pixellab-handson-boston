@@ -48,10 +48,13 @@ console.warn(`
 `);
 var friendKeys = Object.keys(person.friends);
 // ['larry', 'steven', 'carol']
-friendKeys.forEach(function (key) {
-  var friend = person.friends[key];
-  console.log(`${friend.surname} ${friend.name}`);
-});
+friendKeys
+  .slice()
+  .reverse()
+  .forEach(function (key) {
+    var friend = person.friends[key];
+    console.log(`${friend.surname} ${friend.name}`);
+  });
 
 console.warn(`
   Afiseaza propozitia: “Prietenii mei sunt Larry,
@@ -87,4 +90,43 @@ friendKeys.forEach(function (key) {
   console.log(
     `Diferenta de varsta intre ${friend.name} si ${person.name} este de ${diff} ani.`,
   );
+});
+
+console.warn(`Folosind Object.keys() pe proprietatea skills, afiseaza toate abilitatile din obiectul skills.
+`);
+skillKeys.forEach(function (key) {
+  console.log(key);
+});
+
+console.warn(
+  `Prin aceeasi metoda, afiseaza o lista cu numele complet al prietenilor. `,
+);
+friendKeys.forEach(function (key) {
+  var friend = person.friends[key];
+  console.log(`${friend.name} ${friend.surname}`);
+});
+
+console.warn(`Afiseaza propozitia: “Prietenii mei sunt Larry Larryson, Steven Stevenson si Carol Carolson.” folosind Object.keys()
+`);
+var message2 = 'Prietenii mei sunt ';
+friendKeys.forEach(function (key, index, friends) {
+  var friend = person.friends[key];
+  var punctuation = ', ';
+  if (index === friends.length - 2) {
+    punctuation = ' si ';
+  }
+  if (index === friends.length - 1) {
+    punctuation = '.';
+  }
+  message2 += `${friend.name} ${friend.surname}${punctuation}`;
+});
+console.log(message2);
+
+console.warn(
+  `Folosind bucla, afiseaza mai multe propozitii
+   (cate una per console.log()) care sa afiseze: “Larry are xx ani. Steven are …”`,
+);
+friendKeys.forEach(function (key) {
+  var friend = person.friends[key];
+  console.log(`${friend.name} are ${friend.age} ani.`);
 });
