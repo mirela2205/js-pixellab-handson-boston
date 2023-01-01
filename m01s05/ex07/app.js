@@ -1,20 +1,24 @@
 const dateBuilder = [
   function () {
-    return '2022';
+    return '2023';
   },
 
   () => {
-    return 'Decembrie';
+    return 'Ianuarie';
   },
 
   function () {
-    return '15';
+    return '1';
   },
 ];
 
-dateBuilder[3] = () => {
-  return 'Joi';
-};
+// dateBuilder[3] = () => {
+//   return 'Joi';
+// };
+
+dateBuilder.push(() => {
+  return 'Duminica';
+});
 
 console.warn(`
   Folosind arrayul dateBuilder. Afiseaza luna curenta.
@@ -35,3 +39,19 @@ console.warn(`
   Afiseaza propozitia: “Astazi este zz.”.
 `);
 console.log(`Astazi este ${dateBuilder[3]()}.`);
+
+console.warn(`Folosind arrayul dateBuilder. Afiseaza anul curent.
+`);
+console.log(dateBuilder[0]());
+
+console.warn(`Afiseaza propozitia: “Suntem in luna an.”.
+`);
+console.log(`Suntem in ${dateBuilder[1]()} ${dateBuilder[0]()}.`);
+
+console.warn(`Afiseaza propozitia: “Astazi este zi, data.”.`);
+console.log(`Astazi este ${dateBuilder[3]()}, ${dateBuilder[2]()}.`);
+
+console.warn(`Afiseaza propozitia: “Data curenta este zi luna an.”.`);
+console.log(
+  `Data curenta este ${dateBuilder[2]()} ${dateBuilder[1]()} ${dateBuilder[0]()}.`,
+);

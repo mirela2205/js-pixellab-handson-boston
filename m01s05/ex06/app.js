@@ -36,3 +36,20 @@ console.log(
     'Age',
   )} ani si m-am nascut in anul ${currentYear - accessor('Age')}.`,
 );
+
+console.warn(`Folosind accesorul afiseaza numele persoanei.
+`);
+console.log(firstName);
+
+console.warn(`Afiseaza varsta persoanei.
+`);
+const currentAge = accessor('Age');
+console.log(currentAge);
+
+console.warn(`Afiseaza anul de nastere al persoanei folosind anul curent. Intr-o propozitie de forma “M-am nascut in 1987.”
+`);
+console.log(`M-am nascut in ${currentYear - currentAge}.`);
+
+console.warn(`Afiseaza propozitia “Ma numesc xxx yyy si am aa ani!”
+`);
+console.log(`Ma numesc ${accessor('Name')} si am ${currentAge} ani!`);

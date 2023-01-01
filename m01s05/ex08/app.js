@@ -1,5 +1,7 @@
 const button = document.getElementById('clicker');
 const removeEventButton = document.getElementById('remove-event');
+const age = document.getElementById('query');
+const paragraphElement = document.getElementById('message');
 
 function clickHandler() {
   alert('Ai apasat butonlu!');
@@ -17,3 +19,11 @@ button.addEventListener('click', clickHandler);
 removeEventButton.addEventListener('click', function () {
   button.removeEventListener('click', clickHandler);
 });
+
+age.addEventListener('click', function () {
+  const AgeInput = prompt('Ce varsta ai?');
+  const result = console.log(`Ai ${AgeInput} ani.`);
+  paragraphElement.innerText = result;
+});
+
+// innertext este undefined
