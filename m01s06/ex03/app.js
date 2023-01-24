@@ -1,5 +1,7 @@
-const button = document.querySelector('button');
+document.addEventListener('DOMContentLoaded', () => {
+  const button = document.querySelector('button');
 
-button.addEventListener('click', () => {
-  alert('Am apasat butonul');
+  button.addEventListener('click', () => {
+    alert('Am apasat butonul');
+  });
 });
