@@ -21,9 +21,9 @@ removeEventButton.addEventListener('click', function () {
 });
 
 age.addEventListener('click', function () {
-  const AgeInput = prompt('Ce varsta ai?');
-  const result = console.log(`Ai ${AgeInput} ani.`);
-  paragraphElement.innerText = result;
+  const ageInput = prompt('Ce varsta ai?');
+  let message = '';
+  message = `Ai ${ageInput} ani.`;
+  console.log(message);
+  paragraphElement.innerText = message;
 });
-
-// innertext este undefined
