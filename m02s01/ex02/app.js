@@ -53,9 +53,26 @@ class Bicycle extends Vehicle {
   }
 }
 
+class Tricycle extends Vehicle {
+  constructor(make, color, speed, topSpeed) {
+    super(make, color, 3, speed, topSpeed, 0);
+  }
+}
+
+const trike = new Tricycle('Trike', 'red', 2, 9, -2);
 const bike = new Bicycle('Pegas', 'red', 8, 20);
 bike.setSpeed(2);
 bike.decelerate();
 bike.decelerate();
 bike.decelerate();
 bike.setSpeed(-10);
+
+trike.setSpeed(0);
+trike.decelerate();
+trike.decelerate();
+trike.decelerate();
+trike.setSpeed(-10);
+
+const audi = new Car('Audi', 'blue', 3, 140, -50);
+audi.setSpeed(140);
+audi.accelerate();
