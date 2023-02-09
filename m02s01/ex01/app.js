@@ -126,4 +126,11 @@ cars.forEach((car) => {
   car.decelerate();
 
   console.log(`Viteza noua este ${car.speed} km/h.`);
+
+  car.accelerate();
+  car.accelerate();
+  car.accelerate();
+  car.accelerate();
+  car.accelerate();
+  // codul de mai sus cu accelerate() ca sa se inverzeasca pixeltab
 });

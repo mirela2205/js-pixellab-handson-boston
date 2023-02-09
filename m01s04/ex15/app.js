@@ -50,3 +50,23 @@ for (var i = 0; i < friends.length; i++) {
     console.log(message);
   }
 }
+
+//varianta lui Dragos facut in clasa
+
+for (let i = 0; i < person.friends.length; i++) {
+  const outerFriend = person.friends[i];
+
+  for (let j = 0; j < person.friends.length; j++) {
+    const innerFriend = person.friends[j];
+
+    if (i === j) {
+      continue;
+    }
+
+    console.log(
+      `Intre ${outerFriend.name} si ${
+        innerFriend.name
+      } este o diferenta ${Math.abs(outerFriend.age - innerFriend.age)} ani.`,
+    );
+  }
+}
