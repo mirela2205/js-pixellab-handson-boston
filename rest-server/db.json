@@ -1,3 +1,20 @@
 {
-  "persons": []
+"persons": [
+  {
+    "name": "Carol",
+    "surname": "Carolson",
+    "skills": [
+      "a",
+      "b"
+    ]
+  },
+  {
+    "name": "Steven",
+    "surname": "Stevenson",
+    "skills": [
+      "a",
+      "b"
+    ]
+  }
+]
 }
